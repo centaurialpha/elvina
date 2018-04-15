@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">src/main.qml</file>
+        <file alias="MainPage">src/MainPage.qml</file>
+        <file alias="CButton.qml">src/CButton.qml</file>
+        <file alias="backend.js">src/backend.js</file>
+    </qresource>
+    <qresource prefix="/assets">
+        <file alias="fontawesome">assets/fontawesome-webfont.ttf</file>
+    </qresource>
+</RCC>
