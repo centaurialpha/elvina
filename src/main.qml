@@ -15,7 +15,7 @@ ApplicationWindow {
             modelo.addData(req.responseText)
             showMain()
         } else {
-            console.debug("Error...")
+            dialogErrorConexion.open()
         }
 
         busyIndicator.running = false
@@ -40,6 +40,22 @@ ApplicationWindow {
     BusyIndicator {
         id: busyIndicator
         anchors.centerIn: parent
+    }
+
+    Dialog {
+        id: dialogErrorConexion
+
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+        parent: ApplicationWindow.overlay
+        modal: true
+        standardButtons: Dialog.Ok
+        title: "Error"
+        onAccepted: Qt.quit()
+
+        Label {
+            text: "Error de conexión :(. Por favor intenta luego."
+        }
     }
 
     header: ToolBar {
